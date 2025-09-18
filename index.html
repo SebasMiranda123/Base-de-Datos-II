@@ -68,23 +68,6 @@
       padding-bottom: 5px;
     }
 
-    .sidebar button {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      background-color: #1abc9c;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: background 0.3s ease;
-    }
-
-    .sidebar button:hover {
-      background-color: #16a085;
-    }
-
     .sidebar ul {
       list-style: none;
       padding: 0;
@@ -190,8 +173,7 @@
     <!-- SIDEBAR -->
     <div class="sidebar">
       <h3>Semanas</h3>
-      <button onclick="agregarSemana()">+ Agregar Semana</button>
-      <ul id="sidebarList">
+      <ul>
         <li><a href="semana1.html">Semana 1</a></li>
         <li><a href="semana2.html">Semana 2</a></li>
         <li><a href="semana3.html">Semana 3</a></li>
@@ -207,7 +189,7 @@
       </p>
 
       <!-- CONTENEDOR DE SEMANAS -->
-      <div class="weeks-container" id="weeksContainer">
+      <div class="weeks-container">
         <!-- Semana 1 -->
         <div class="week-box">
           <h3>Semana 1</h3>
@@ -236,39 +218,7 @@
             <li>Ejemplos prácticos</li>
           </ul>
         </div>
-      </div>
-    </div>
   </main>
-
-  <script>
-    let contadorSemana = 3; // ya hay 3 semanas iniciales
-
-    function agregarSemana() {
-      contadorSemana++;
-      const nuevaSemana = "Semana " + contadorSemana;
-
-      // Agregar en la sidebar
-      const sidebarList = document.getElementById("sidebarList");
-      const nuevoLi = document.createElement("li");
-      const nuevoLink = document.createElement("a");
-      nuevoLink.href = "semana" + contadorSemana + ".html";
-      nuevoLink.textContent = nuevaSemana;
-      nuevoLi.appendChild(nuevoLink);
-      sidebarList.appendChild(nuevoLi);
-
-      // Agregar en el área de contenido
-      const weeksContainer = document.getElementById("weeksContainer");
-      const nuevaBox = document.createElement("div");
-      nuevaBox.classList.add("week-box");
-      nuevaBox.innerHTML = `
-        <h3>${nuevaSemana}</h3>
-        <ul>
-          <li>Contenido por definir...</li>
-        </ul>
-      `;
-      weeksContainer.appendChild(nuevaBox);
-    }
-  </script>
 
 </body>
 </html>
