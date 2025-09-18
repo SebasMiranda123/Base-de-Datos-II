@@ -87,4 +87,140 @@
       color: #2c3e50;
       font-weight: 500;
       border-radius: 8px;
-      back
+      background-color: #e8fdf6;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar ul li a:hover {
+      background-color: #1abc9c;
+      color: white;
+      transform: translateX(6px);
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    /* ======= CONTENIDO ======= */
+    .content {
+      flex: 1;
+      padding: 30px;
+      overflow-y: auto;
+    }
+
+    .content h2 {
+      margin-top: 0;
+      font-size: 26px;
+      color: #16a085;
+    }
+
+    .content p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* ======= CUADROS DE SEMANAS ======= */
+    .weeks-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .week-box {
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .week-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    .week-box h3 {
+      margin-top: 0;
+      color: #16a085;
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .week-box ul {
+      list-style: disc;
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .week-box ul li {
+      margin-bottom: 6px;
+      font-size: 15px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1>Base de datos II</h1>
+    <div class="nombre">Miranda Lévano Sebastián Gabriel</div>
+  </header>
+
+  <!-- CUERPO -->
+  <main>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h3>Semanas</h3>
+      <ul>
+        <li><a href="semana1.html">Semana 1</a></li>
+        <li><a href="semana2.html">Semana 2</a></li>
+        <li><a href="semana3.html">Semana 3</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="content">
+      <h2>Bienvenido</h2>
+      <p>
+        Este repositorio tiene como finalidad organizar y almacenar de manera estructurada las clases y trabajos correspondientes al curso.
+        A continuación, se presentan las secciones semanales junto con sus respectivos contenidos.
+      </p>
+
+      <!-- CONTENEDOR DE SEMANAS -->
+      <div class="weeks-container">
+        <!-- Semana 1 -->
+        <div class="week-box">
+          <h3>Semana 1</h3>
+          <ul>
+            <li>Manual para crear una cuenta de github</li>
+            <li>Manual para subir su página web</li>
+            <li>Informe Técnico</li>
+          </ul>
+        </div>
+
+        <!-- Semana 2 -->
+        <div class="week-box">
+          <h3>Semana 2</h3>
+          <ul>
+            <li>Modelo entidad-relación</li>
+            <li>Diagramas básicos</li>
+            <li>Ejercicios prácticos</li>
+          </ul>
+        </div>
+
+        <!-- Semana 3 -->
+        <div class="week-box">
+          <h3>Semana 3</h3>
+          <ul>
+            <li>Normalización 1FN, 2FN, 3FN</li>
+            <li>Ejemplos prácticos</li>
+          </ul>
+        </div>
+      </div> <!-- CIERRE weeks-container -->
+    </div> <!-- CIERRE content -->
+  </main> <!-- CIERRE main -->
+
+</body>
+</html>
