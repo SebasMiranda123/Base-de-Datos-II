@@ -179,13 +179,31 @@
         <li>    Una vez creado el repositorio puedes subir tus archivos dando click en "Add file" (Agregar archivo)</li>
         <li>    Se desplegarán 2 opciones "Upload file" (Subir archivo) y "Create file" (Crear archivo)</li>
         <li>    Una vez escogido tus archivos para subirlos tendrás que escribir un mensaje de confirmación como "Subir archivos de la página"</li>
-        <h3>Informe Técnico</h3>
+        <h3>Informe Técnico Comparando la arquitectura centralizada y la arquitectura distribuida</h3>
 <p>
   <a href="Cuadro comparativo.jpg" target="_blank">
     <img src="Cuadro comparativo.jpg" alt="Cuadro comparativo" style="max-width: 200px; border-radius: 10px; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
   </a>
 </p>
-
+        <h3>1. Manual para instalar SQL Server 2022</h3>
+        <li>    Requisitos: Tener descargado el instalador de SQL Server 2022 desde la página oficial de Microsoft</li>
+        <li>    Ejecuta el archivo de instalación con permisos de administrador</li>
+        <li>    En la ventana inicial selecciona la opción "Nueva instalación independiente de SQL Server o agregar características a una instalación existente"</li>
+        <li>    Acepta los términos de licencia y haz clic en "Siguiente"</li>
+        <li>    Espera que el instalador verifique los requisitos de instalación y luego continúa</li>
+        <li>    En "Selección de características", marca "Motor de base de datos" y otras que necesites (como Herramientas de administración)</li>
+        <li>    Haz clic en "Siguiente" para continuar con la configuración de la instancia, elige "Instancia predeterminada" o coloca un nombre personalizado</li>
+        <li>    En "Configuración del servidor", asigna la cuenta de inicio de sesión del motor SQL (puede ser NT Service\SQLSERVERAGENT o tu usuario)</li>
+        <li>    En "Configuración del motor de base de datos", selecciona el modo de autenticación: 
+                - Modo Windows (usa tu usuario de Windows) o 
+        - Modo mixto (Windows + SQL Server, con contraseña para sa)</li>
+        <li>    Si eliges modo mixto, establece una contraseña segura para el usuario "sa"</li>
+        <li>    Agrega tu usuario de Windows como administrador del servidor SQL</li>
+        <li>    Haz clic en "Siguiente" y luego en "Instalar" para iniciar la instalación</li>
+        <li>    Espera a que termine el proceso (puede tardar varios minutos)</li>
+        <li>    Una vez finalizada la instalación, haz clic en "Cerrar"</li>
+        <li>    Instala también SQL Server Management Studio (SSMS) desde la web de Microsoft para poder administrar gráficamente tu servidor</li>
+        <li>    Abre SSMS, conéctate al servidor local (nombre de tu PC o localhost) y verifica que todo funciona correctamente</li>
       </ul>
     </div>
   </main>
