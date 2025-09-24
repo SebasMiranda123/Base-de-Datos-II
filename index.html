@@ -37,11 +37,33 @@
       flex: 1;
     }
 
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
     header .nombre {
       font-size: 18px;
       font-weight: 500;
       text-align: right;
-      min-width: 180px;
+    }
+
+    .login-btn {
+      background-color: #ffffff;
+      color: #16a085;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background-color: #16a085;
+      color: white;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
     }
 
     /* ======= LAYOUT PRINCIPAL ======= */
@@ -165,7 +187,10 @@
   <header>
     <img src="logo.png" alt="Logo" class="logo">
     <h1>Base de datos II</h1>
-    <div class="nombre">Miranda Lévano Sebastián Gabriel</div>
+    <div class="header-right">
+      <div class="nombre">Miranda Lévano Sebastián Gabriel</div>
+      <button class="login-btn">Login</button>
+    </div>
   </header>
 
   <!-- CUERPO -->
