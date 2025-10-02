@@ -1,9 +1,9 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Semana 1 - Base de datos II</title>
+  <title>Semana 2 - Base de datos II</title>
   <style>
     /* ======= ESTILOS GENERALES ======= */
     body {
@@ -128,10 +128,34 @@
       color: #16a085;
     }
 
-    .content p, .content ul {
-      font-size: 16px;
-      color: #555;
-      line-height: 1.6;
+    .pdf-container {
+      margin-top: 20px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      height: 600px;
+    }
+
+    .pdf-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #1abc9c;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background-color: #16a085;
     }
   </style>
 </head>
@@ -140,7 +164,7 @@
   <!-- HEADER -->
   <header>
     <img src="logo.png" alt="Logo" class="logo">
-    <h1>Base de datos II</h1>
+    <h1>Base de datos II - Semana 2</h1>
     <div class="nombre">Miranda Lévano Sebastián Gabriel</div>
   </header>
 
@@ -160,10 +184,17 @@
     <!-- CONTENIDO PRINCIPAL -->
     <div class="content">
       <h2>Semana 2</h2> 
-      <ul>
-      </ul>
+
+      <!-- VISTA PREVIA DEL PDF -->
+      <div class="pdf-container">
+        <iframe src="Enunciado 01.pdf"></iframe>
+      </div>
+
+      <!-- BOTÓN DESCARGA SQL -->
+      <a href="ProveedoresBD.sql" download class="download-btn">📥 Descargar ProveedoresBD.sql</a>
     </div>
   </main>
 
 </body>
-</html> quiero que le pongas en lugar de semana 1 sea semana 2
+</html>
+
