@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Base de datos II</title>
+  <style>
+    /* Estilos simples para mostrar el contenido */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0fdfa;
+      margin: 0;
+      color: #2c3e50;
+      padding: 20px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(90deg, #1abc9c, #16a085);
+      color: white;
+      padding: 20px 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border-radius: 10px;
+    }
+    button {
+      background-color: #ffffff;
+      color: #16a085;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      background-color: #16a085;
+      color: white;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Base de datos II</h1>
+  <div>
+    <span id="welcomeUser"></span>
+    <button id="logoutBtn">Cerrar sesión</button>
+  </div>
+</header>
+
+<main>
+  <h2>Contenido Principal</h2>
+  <p>Bienvenido a tu repositorio organizado de Base de datos II.</p>
+</main>
+
+<script>
+  const welcomeUser = document.getElementById('welcomeUser');
+  const logoutBtn = document.getElementById('logoutBtn');
+
+  // Verificar si hay usuario logueado
+  const loggedUser = localStorage.getItem('loggedUser');
+  if (!loggedUser) {
+    // Si no hay usuario, redirigir a login
+    window.location.href = 'login.html';
+  } else {
+    welcomeUser.textContent = `Hola, ${loggedUser.toUpperCase()}`;
+  }
+
+  logoutBtn.onclick = () => {
+    localStorage.removeItem('loggedUser');
+    window.location.href = 'login.html';
+  };
+</script>
+
+</body>
+</html>
