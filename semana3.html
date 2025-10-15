@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semana 3 - Base de datos II</title>
+  <style>
+    /* ======= ESTILOS GENERALES ======= */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0fdfa;
+      color: #2c3e50;
+    }
+
+    /* ======= HEADER ======= */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(90deg, #1abc9c, #16a085);
+      color: white;
+      padding: 25px 50px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    header img.logo {
+      height: 60px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      text-align: center;
+      flex: 1;
+    }
+
+    header .nombre {
+      font-size: 18px;
+      font-weight: 500;
+      text-align: right;
+      min-width: 180px;
+    }
+
+    /* ======= LAYOUT PRINCIPAL ======= */
+    main {
+      display: flex;
+      height: calc(100vh - 110px);
+    }
+
+    /* ======= SIDEBAR ======= */
+    .sidebar {
+      width: 240px;
+      background-color: #ffffff;
+      padding: 20px;
+      border-right: 1px solid #ddd;
+      box-shadow: 3px 0 10px rgba(0,0,0,0.05);
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #16a085;
+      border-bottom: 2px solid #1abc9c;
+      padding-bottom: 5px;
+    }
+
+    .sidebar button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      background-color: #1abc9c;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .sidebar button:hover {
+      background-color: #16a085;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar ul li {
+      margin: 6px 0;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar ul li a {
+      display: block;
+      padding: 12px 15px;
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: 500;
+      border-radius: 8px;
+      background-color: #e8fdf6;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar ul li a:hover {
+      background-color: #1abc9c;
+      color: white;
+      transform: translateX(6px);
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    /* ======= CONTENIDO ======= */
+    .content {
+      flex: 1;
+      padding: 30px;
+      overflow-y: auto;
+    }
+
+    .content h2 {
+      margin-top: 0;
+      font-size: 26px;
+      color: #16a085;
+    }
+
+    .pdf-container {
+      margin-top: 20px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      height: 600px;
+    }
+
+    .pdf-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #1abc9c;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background-color: #16a085;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1>Base de datos II - Semana 2</h1>
+    <div class="nombre">Miranda Lévano Sebastián Gabriel</div>
+  </header>
+
+  <!-- CUERPO -->
+  <main>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h3>Semanas</h3>
+      <ul>
+        <li><a href="semana1.html">Semana 1</a></li>
+        <li><a href="semana2.html">Semana 2</a></li>
+        <li><a href="semana3.html">Semana 3</a></li>
+        <li><a href="inicio.html">Volver al inicio</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="content">
+      <h2>Semana 3</h2> 
+
+      <!-- VISTA PREVIA DEL PDF -->
+      <div class="pdf-container">
+        <iframe src="Cuadro Comparativo de Bases de Datos.pdf"></iframe>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
