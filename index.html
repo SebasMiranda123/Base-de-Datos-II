@@ -23,7 +23,6 @@
       width: 300px;
       box-shadow: 0 3px 10px rgba(0,0,0,0.3);
     }
-    
     #loginModal input {
       width: 100%;
       padding: 8px;
@@ -58,22 +57,14 @@
 
   <!-- HEADER -->
   <header>
-  <img src="logo.png" alt="Logo" class="logo" />
-  <h1>Base de datos II</h1>
-  <div class="header-right">
-    <div class="nombre" id="userGreeting">Miranda Lévano Sebastián Gabriel</div>
-    <button class="login-btn" id="loginBtn">Login</button>
-    <button class="login-btn" id="logoutBtn" style="display:none;">Logout</button>
-  </div>
-</header>
-
-  .header-right {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-left: auto; /* Esto empuja todo hacia la derecha */
-}
-
+    <img src="logo.png" alt="Logo" class="logo" />
+    <h1>Base de datos II</h1>
+    <div class="header-right">
+      <div class="nombre" id="userGreeting">Miranda Lévano Sebastián Gabriel</div>
+      <button class="login-btn" id="loginBtn">Login</button>
+      <button class="login-btn" id="logoutBtn" style="display:none;">Logout</button>
+    </div>
+  </header>
 
   <!-- LOGIN MODAL -->
   <div id="loginModal">
@@ -185,8 +176,7 @@
         loginModal.style.display = "none";
       }
     });
-  
-</script>
-
+  </script>
 </body>
 </html>
+
