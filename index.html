@@ -185,24 +185,7 @@
         loginModal.style.display = "none";
       }
     });
-  const loginBtn = document.getElementById('loginBtn');
-  const logoutBtn = document.getElementById('logoutBtn');
-  const userGreeting = document.getElementById('userGreeting');
-
-  loginBtn.addEventListener('click', () => {
-    const username = prompt('Ingrese su nombre de usuario:');
-    if(username) {
-      userGreeting.textContent = `Hola, ${username}`;
-      loginBtn.style.display = 'none';
-      logoutBtn.style.display = 'inline-block';
-    }
-  });
-
-  logoutBtn.addEventListener('click', () => {
-    userGreeting.textContent = '';
-    loginBtn.style.display = 'inline-block';
-    logoutBtn.style.display = 'none';
-  });
+  
 </script>
 
 </body>
